@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { createRoot } from "react-dom/client";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+import App from "./App.jsx";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme/index.js";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import "./index.css";
+
+createRoot(document.getElementById("root")).render(
+  // الملفات الي جوا الااب هي الي رح تقدر تشوف الثيم بروفايدر
+  <ThemeProvider theme={theme}>
+    {/* to reset defult margin in material */}
+    <CssBaseline />
     <App />
-  </StrictMode>,
-)
+  </ThemeProvider>
+);

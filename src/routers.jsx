@@ -14,6 +14,8 @@ import Shop from "./pages/shop/Shop";
 import Cart from "./pages/cart/Cart";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
+import ForgetPassword from "./pages/forgetPassword/ForgetPassword";
+import VerificationCode from "./pages/verificationCode/VerificationCode";
 
 const routes = createBrowserRouter([
   {
@@ -31,18 +33,26 @@ const routes = createBrowserRouter([
         element: <Shop />,
       },
       {
-        path : "/cart",
-        element : <Cart/>,
+        path: "/cart",
+        element: <Cart />,
       },
       {
-        path : "/register",
-        element: <Register/>
+        path: "/register",
+        element: <Register />,
       },
       {
-        path: '/login',
-        element: <Login/>
-      }
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/forgetPassword",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "/verificationCode",
+        element: <VerificationCode />,
+      },
     ],
-  },// End MainLayout
+  }, // End MainLayout
 ]);
 export default routes;
